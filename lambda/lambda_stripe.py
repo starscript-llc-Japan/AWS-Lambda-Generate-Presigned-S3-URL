@@ -9,7 +9,7 @@ stripe.api_key = ""
 
 def lambda_handler(event, context):
     try:
-        logger.info("Event: %s", event)  # Check what kind of request it is
+        logger.info("Event: %s", event)  # Check what kind of request this is
 
         session = stripe.checkout.Session.create(
             payment_method_types=['card'],
